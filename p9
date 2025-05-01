@@ -1,0 +1,33 @@
+#Assignment No 9 Visualization II
+# Plot a box plot for Age distribution by Gender and Survival Status
+plt.figure(figsize=(10, 5))
+sns.boxplot(x='Sex', y='Age', hue='Survived', data=df, palette='pastel')
+plt.xlabel('Gender')
+plt.ylabel('Age')
+plt.title('Age Distribution by Gender and Survival Status')
+plt.show()
+
+
+
+# Here are the key observations from the box plot of age distribution with respect to gender and survival status:  
+
+# 1. Median Age Differences:
+#    - The median age of male passengers is higher than that of female passengers.  
+#    - Among survivors, the median age is slightly lower, indicating younger passengers had a better chance of survival.  
+
+# 2. Gender-Based Survival Trends: 
+#    - Female passengers, across all age groups, had a higher survival rate than males.  
+#    - Many younger females survived, supporting the notion that women and children were prioritized during evacuation.  
+
+# 3. Survival Among Males:  
+#    - A significant portion of young male passengers survived, while older males had a lower survival rate.  
+#    - The survival rate for older men was much lower, showing they were not given priority during rescue efforts.  
+
+# 4. Outliers and Age Variations: 
+#    - There are a few outliers, especially in the age distribution of survivors, suggesting that some older passengers also survived despite the trend.  
+#    - The spread of ages among male passengers is broader than that of females.  
+
+#  Inference:  
+# - Women and children were more likely to survive** due to evacuation protocols.  
+# - Older male passengers had the lowest survival rates**, possibly due to prioritization of women and younger individuals.  
+# - Young male survivors were mostly children, reinforcing the "children first" policy. 
