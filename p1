@@ -1,0 +1,15 @@
+import pandas as pd
+import numpy as np
+df = pd.read_csv("titanic.csv")
+df.head()
+df.info()
+df.describe()
+df.isnull().sum()
+df.shape
+df.dtypes
+# Convert 'Survived' and 'Pclass' to category
+df['Survived'] = df['Survived'].astype('category')
+df['Pclass'] = df['Pclass'].astype('category')
+df['Embarked'] = df['Embarked'].astype('category')
+df_encoded = pd.get_dummies(df, columns=['Sex', 'Embarked'], drop_first=True)
+df_encoded.head()
